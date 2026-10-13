@@ -196,4 +196,4 @@ Integrar velocidad acumula cambios de posición con signo. Los 15 m de ida y los
 - Comprobación por posiciones: $x(40)-x(0)=0-0=0\ \text{m}$.
 - Comprobación del recorrido: $|15-0|+|0-15|=30\ \text{m}$.
 - Este desarrollo fue redactado con apoyo de IA a partir del ejemplo acordado en la conversación. El equipo debe revisarlo, comprenderlo e incorporar el apoyo a su declaración de IA, junto con los usos previos de NotebookLM y las verificaciones que efectivamente realice.
-- Queda pendiente incorporar al registro de fuentes las dos fuentes matemáticas complementarias exigidas y la documentación oficial de Manim. Este documento no sustituye esas referencias ni el guion narrado del video.
+- Las dos fuentes matemáticas complementarias y la documentación oficial de Manim están registradas en [06-fuentes.md](06-fuentes.md). Queda pendiente la revisión de las fuentes por el equipo y el registro de las páginas técnicas utilizadas al implementar las escenas. Este documento no sustituye esas referencias ni el guion narrado del video.
