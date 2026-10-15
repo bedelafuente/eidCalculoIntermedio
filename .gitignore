@@ -1,2 +1,9 @@
 # Ignorar archivos PDF en cualquier carpeta
 *.[pP][dD][fF]
+
+# Entorno local y archivos generados por Python y Manim
+.venv/
+__pycache__/
+*.py[cod]
+media/
+.DS_Store

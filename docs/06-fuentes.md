@@ -41,10 +41,31 @@ Estas fuentes fueron seleccionadas para el proyecto. El registro no acredita por
 - **Enlace:** https://docs.manim.community/en/stable/tutorials/
 - **Uso previsto:** construcción y ejecución de las escenas. Registrar la versión instalada y las páginas concretas utilizadas al implementar el código.
 
+### Documentación utilizada en la primera escena
+
+- **Versión implementada:** Manim Community 0.22.0, con Python 3.11.15.
+- [Instalación local](https://docs.manim.community/en/stable/installation/uv.html):
+  entorno aislado y dependencias del sistema para macOS.
+- [ValueTracker](https://docs.manim.community/en/stable/reference/manim.mobject.value_tracker.ValueTracker.html):
+  reloj común para sincronizar el movimiento y los contadores.
+- [Text](https://docs.manim.community/en/stable/reference/manim.mobject.text.text_mobject.Text.html):
+  texto con Pango para ejecutar esta escena sin LaTeX.
+- Los enlaces `stable` pueden cambiar de versión; `requirements.txt` fija la
+  versión utilizada en el proyecto. El auto y los edificios se construyen con
+  figuras vectoriales en el código, sin recursos gráficos externos.
+
 ## Apoyo de IA y verificación
 
 - **Asistente de IA de esta conversación:** apoyo para comprender el tema, proponer y revisar ejemplos, redactar el desarrollo matemático y elaborar el prompt para NotebookLM.
 - **NotebookLM:** video explicativo utilizado como apoyo de estudio. El usuario indicó haberlo visto; no se ha inspeccionado aquí el video generado.
+- **Codex:** implementación de `modelo.py`, la escena `ViajePanaderia`, sus pruebas
+  y la documentación de ejecución y guion del clip, a partir del desarrollo
+  matemático del repositorio. La verificación automática contrasta hitos,
+  continuidad, pausa, acumulación de distancia e integrales por rectángulos;
+  se ejecutaron las ocho pruebas y se generó el MP4 de 30 s a 480p y 15 fps.
+  Se revisaron fotogramas de compra, regreso y llegada para comprobar etiquetas,
+  posición y contadores sincronizados.
+  El equipo debe revisar y comprender el código antes de incorporarlo a la entrega.
 - **Prompt registrado:** [07-prompt-notebooklm.md](07-prompt-notebooklm.md). Corresponde al ejemplo inicial $v(t)=t-2$, no al ejemplo final del auto y la panadería.
 - **Comprobaciones realizadas en el desarrollo:** áreas de rectángulos, integrales por tramos y diferencia entre posiciones inicial y final. Para el ejemplo actual se obtiene desplazamiento de 0 m y distancia de 30 m; véase [el desarrollo matemático](05-desarrollo-matematico.md).
 - **Pendiente del equipo:** contrastar las afirmaciones utilizadas con las fuentes, revisar el texto y documentar las verificaciones efectivamente realizadas por sus integrantes. Ampliar esta declaración si se usa IA para código, imágenes, narración o edición.
