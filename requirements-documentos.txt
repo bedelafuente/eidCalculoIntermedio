@@ -1,0 +1,2 @@
+# Opcional: generar la ficha PDF de avance.
+reportlab==4.4.9

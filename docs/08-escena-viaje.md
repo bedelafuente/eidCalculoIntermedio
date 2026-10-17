@@ -5,8 +5,8 @@
 Mostrar que regresar a la posición inicial puede dar desplazamiento cero con
 distancia recorrida positiva. Esta escena implementa el movimiento de las
 secciones 2 y 7 del [desarrollo matemático](05-desarrollo-matematico.md).
-La gráfica velocidad-tiempo y la visualización de las integrales quedan para
-la siguiente escena.
+La gráfica velocidad-tiempo y la visualización de las integrales se incorporan
+ahora en `escenas/video_grupo16.py`; véase [el guion completo](10-guion-video.md).
 
 ## Reloj y representación
 

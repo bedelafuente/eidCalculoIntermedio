@@ -2,6 +2,28 @@
 
 ## Fuentes matemáticas complementarias
 
+### Fuentes consultadas para el video completo (17 de octubre de 2026)
+
+1. **Gilbert Strang y Edwin "Jed" Herman.** *Calculus Volume 1*. OpenStax,
+   30 de marzo de 2016. Secciones [5.2, The Definite Integral](https://openstax.org/books/calculus-volume-1/pages/5-2-the-definite-integral)
+   y [5.4, Integration Formulas and the Net Change Theorem](https://openstax.org/books/calculus-volume-1/pages/5-4-integration-formulas-and-the-net-change-theorem).
+   La primera respalda las sumas de Riemann, el área con signo y la integrabilidad
+   de funciones con un número finito de saltos. La segunda respalda integrar
+   velocidad para desplazamiento y rapidez para distancia. Se verificaron autoría,
+   fecha y relaciones en las páginas de la editorial; no se copian sus ejemplos,
+   imágenes ni párrafos.
+2. **Grant Sanderson, 3Blue1Brown.** *Integration and the fundamental theorem of
+   calculus*, lección del 5 de mayo de 2017, adaptación textual de Kurt Bruns.
+   [Página del autor](https://www.3blue1brown.com/lessons/integration/).
+   Se consultaron las explicaciones de velocidad por intervalo, rectángulos,
+   refinamiento y contribuciones negativas. Se usa la idea conceptual, con
+   funciones, cifras, dibujos y animaciones propios de este proyecto.
+
+Estas son las dos fuentes complementarias identificadas en los créditos del
+montaje completo. Las siguientes entradas conservan el registro de fuentes
+seleccionadas durante el trabajo anterior. Selección o consulta por el asistente
+no acredita lectura personal de cada integrante.
+
 ### 1. Khan Academy
 
 - **Autor institucional:** Khan Academy.
@@ -58,7 +80,7 @@ Estas fuentes fueron seleccionadas para el proyecto. El registro no acredita por
 
 - **Asistente de IA de esta conversación:** apoyo para comprender el tema, proponer y revisar ejemplos, redactar el desarrollo matemático y elaborar el prompt para NotebookLM.
 - **NotebookLM:** video explicativo utilizado como apoyo de estudio. El usuario indicó haberlo visto; no se ha inspeccionado aquí el video generado.
-- **Codex:** implementación de `modelo.py`, la escena `ViajePanaderia`, sus pruebas
+- **Asistente de programación de OpenAI:** implementación de `modelo.py`, la escena `ViajePanaderia`, sus pruebas
   y la documentación de ejecución y guion del clip, a partir del desarrollo
   matemático del repositorio. La verificación automática contrasta hitos,
   continuidad, pausa, acumulación de distancia e integrales por rectángulos;
@@ -71,3 +93,28 @@ Estas fuentes fueron seleccionadas para el proyecto. El registro no acredita por
 - **Pendiente del equipo:** contrastar las afirmaciones utilizadas con las fuentes, revisar el texto y documentar las verificaciones efectivamente realizadas por sus integrantes. Ampliar esta declaración si se usa IA para código, imágenes, narración o edición.
 
 El prompt y el video de NotebookLM son apoyos de IA, no sustituyen las fuentes matemáticas complementarias. La entrega final requiere las voces de los integrantes y las escenas de Manim indicadas en la pauta.
+
+### Ampliación: video completo del grupo 16
+
+- **Herramienta:** asistente de programación de OpenAI, sesión del 17 de octubre
+  de 2026. **Finalidad:** contrastar los tres PDF, completar el guion y el plan
+  temporal, implementar `escenas/video_grupo16.py`, preparar documentación y
+  comprobar el render. No se generan ni suplantan las voces de los estudiantes.
+- **Partes apoyadas:** `video_plan.py`, la escena completa, guion, matriz V1-V8,
+  registro de documentos, instrucciones y ficha de avance.
+- **Verificación matemática:** resultados contrastados con áreas de rectángulos,
+  posiciones de `modelo.py` y las ocho pruebas existentes. En n=8,16,32 las sumas
+  de puntos medios coinciden exactamente con los tramos: 0 m y 30 m.
+- **Verificación técnica:** compilación de los módulos, render completo con
+  Manim Community 0.22.0, inspección de metadatos y fotogramas. El registro concreto
+  del avance se conserva en `12-estado-del-avance.md`.
+- **Responsabilidad del equipo:** revisar las afirmaciones, grabar sus propias
+  explicaciones, comprobar el montaje con audio y confirmar el uso real de
+  NotebookLM y cualquier otro apoyo antes de presentar la declaración final.
+- **Recursos:** se reutiliza la escena de panadería del propio repositorio,
+  partiendo de `63340b5`; auto, edificios, ejes y áreas son geometría generada por
+  código. No se incorpora material audiovisual externo ni música.
+- **Documentación técnica adicional consultada:** [Axes](https://docs.manim.community/en/stable/reference/manim.mobject.graphing.coordinate_systems.Axes.html),
+  [ValueTracker](https://docs.manim.community/en/stable/reference/manim.mobject.value_tracker.ValueTracker.html)
+  y [documentación oficial 0.22.0](https://docs.manim.community/en/stable/),
+  consultadas el 17 de octubre de 2026.
