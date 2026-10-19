@@ -6,20 +6,19 @@ Pregunta central: **¿Por qué integrar velocidad puede dar un resultado distint
 
 | Integrante | Cuenta de GitHub |
 | --- | --- |
-| Juan Ignacio Carrera | Pendiente de confirmar |
-| Benjamin De La Fuente | Pendiente de confirmar |
-| Benjamin Aliaga | Pendiente de confirmar |
+| Juan Ignacio Carrera | juan-xp |
+| Benjamin De La Fuente | bedelafuente |
+| Benjamin Aliaga | BenjaminAliagaMardones |
 
 Este clon tiene como remoto [bedelafuente/eidCalculoIntermedio](https://github.com/bedelafuente/eidCalculoIntermedio).
-La configuración local de autor es `juan-xp`. El avance se desarrolla en
-**[dev/grupo-16-video](https://github.com/bedelafuente/eidCalculoIntermedio/tree/dev/grupo-16-video)**,
-creada directamente desde `main` en `63340b53e2e9a254c9f776b79662915afaf3ff1b`.
+La configuración local de autor es `juan-xp`. El código entregado está en la
+rama `main`.
 
 ## Avance del video
 
 El repositorio contiene el código y la documentación para reconstruir la base
-visual de cinco minutos. El render intermedio sin audio se retiró para evitar
-confundirlo con el MP4 final de evaluación. Los nombres que aparecen en las
+visual de cinco minutos. También conserva el render de referencia sin audio;
+ese archivo no reemplaza al MP4 final narrado. Los nombres que aparecen en las
 escenas identifican la voz prevista en el guion.
 
 El ejemplo es un viaje a la panadería: 15 m de ida, 10 s de compra y 15 m de
@@ -125,18 +124,17 @@ al ejecutarse; también acepta `--sha` con un commit de 40 caracteres. Usar un
 commit publicado que corresponda al código, sin cambios pendientes.
 El PDF generado no se añade a Git y no sustituye la ficha final.
 
-Para completar la entrega, todavía se necesitan las cuentas de GitHub, las voces
-reales de los tres integrantes, sincronización y mezcla, revisión del video con
-audio y ficha definitiva. Cada voz debe explicar matemáticas, además de
-presentarse. Los entregables finales se llaman:
+La ficha técnica final está documentada en
+[docs/13-ficha-tecnica-video.md](docs/13-ficha-tecnica-video.md). Cada voz debe
+explicar matemáticas, además de presentarse. Los entregables finales se llaman:
 
 - `MAT1188_EID_G16_2026.mp4`: video narrado de 4-6 minutos.
 - `MAT1188_EID_G16_2026.pdf`: ficha con integrantes, cuentas, tema, pregunta,
   duración real, enlace público, SHA del código final, referencias y declaración de IA.
 
 La pauta indica entrega final el **18 de octubre de 2026 a las 23:59**, en
-Blackboard, con MP4 y ficha separados. El equipo debe confirmar la entrega y
-aceptación del PDF de ética independiente. Este avance no realiza esa entrega.
+Blackboard, con MP4 y ficha separados. El PDF de ética se entrega de forma
+independiente en la actividad correspondiente.
 
 ## Documentos base del repositorio
 
@@ -149,4 +147,5 @@ aceptación del PDF de ética independiente. Este avance no realiza esa entrega.
   con otro ejemplo; no es el guion del video evaluado.
 
 `media/`, `tmp/`, `audio/`, `output/` y `.venv/` se generan localmente y están
-excluidos de Git. Solo la base seleccionada en `avances/` se publica como muestra.
+excluidos de Git. El render de referencia publicado en `avances/` es material de
+apoyo y no el video final de entrega.

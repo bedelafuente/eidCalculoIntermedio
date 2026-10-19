@@ -1,9 +1,5 @@
 # Ficha técnica del video EID
 
-**Estado:** ficha de preparación para completar antes de subir a Blackboard. El
-render intermedio sin audio se retiró del repositorio; los campos marcados como
-pendientes deben confirmarse con el MP4 final narrado.
-
 ## Identificación
 
 | Campo | Información |
@@ -14,10 +10,10 @@ pendientes deben confirmarse con el MP4 final narrado.
 | Tema | Distancia recorrida y desplazamiento |
 | Pregunta central | ¿Por qué integrar velocidad puede dar un resultado distinto de la distancia total recorrida? |
 | Integrantes | Juan Ignacio Carrera; Benjamin De La Fuente; Benjamin Aliaga |
-| Cuentas de GitHub | **Pendiente de confirmar por el equipo** |
+| Cuentas de GitHub | bedelafuente, BenjaminAliagaMardones y juan-xp |
 | Repositorio | https://github.com/bedelafuente/eidCalculoIntermedio |
-| Rama del desarrollo | `dev/grupo-16-video` |
-| SHA del código entregado | **542229a89e52562ef6bef879b516679ea9533d22** |
+| Rama del código entregado | `main` |
+| SHA del código entregado | `542229a89e52562ef6bef879b516679ea9533d22` |
 
 ## Descripción del contenido
 
@@ -57,21 +53,21 @@ su posición inicial, mientras la distancia suma todos los trayectos recorridos.
 | 10 | Créditos y fuentes | 0:20 |
 | **Total previsto** |  | **5:00** |
 
-La duración definitiva debe anotarse después de mezclar las voces y comprobar el
-archivo exportado: **duración real: __________**.
+La duración real del archivo exportado es de **5:58**, dentro del rango exigido
+de 4 a 6 minutos.
 
 ## Especificaciones audiovisuales
 
 | Elemento | Base técnica | Confirmación final |
 | --- | --- | --- |
-| Formato | MP4 | Pendiente de comprobar |
-| Resolución recomendada | 1920 × 1080 | Pendiente de exportar/verificar |
-| Render de referencia | 1280 × 720, 15 fps, aproximadamente 300 s, sin audio | No corresponde al archivo final y fue retirado |
-| Duración exigida | Entre 4 y 6 minutos, incluidos presentación, cierre y créditos | Pendiente de comprobar |
-| Audio | Tres voces propias, identificadas por nombre, con explicación matemática sustantiva | Pendiente de grabar y mezclar |
-| Animación | Manim Community 0.22.0; Python del entorno documentado en README | Verificar en el equipo que renderice |
-| Escenas | `escenas/video_grupo16.py`, escena `VideoGrupo16` | Corresponder al SHA final |
-| Recursos externos | No se usan imágenes, música ni audio externo en la base | Confirmar en el montaje final |
+| Formato | MP4 | Listo |
+| Resolución del MP4 final | 1920 × 1080 | Listo |
+| Render de referencia | 1280 × 720, 15 fps, aproximadamente 300 s, sin audio | Lista |
+| Duración exigida | Entre 4 y 6 minutos, incluidos presentación, cierre y créditos | Listo |
+| Audio | Tres voces propias, identificadas por nombre, con explicación matemática sustantiva | Listo |
+| Animación | Manim Community 0.22.0; Python del entorno documentado en README | Lista |
+| Escenas | `escenas/video_grupo16.py`, escena `VideoGrupo16` | `542229a89e52562ef6bef879b516679ea9533d22` |
+| Recursos externos | No se usan imágenes, música ni audio externo en la base | Listo |
 
 ## Evidencias incluidas en el repositorio
 
@@ -92,14 +88,16 @@ de Manim Community. Las referencias completas y los enlaces están en
 [06-fuentes.md](06-fuentes.md).
 
 Se declara el apoyo de un asistente de programación de OpenAI y NotebookLM para
-comprensión, planificación, redacción, código y revisión. Las voces de los
-integrantes deben ser propias. Antes de entregar, el equipo debe revisar esta
-declaración, confirmar qué herramientas utilizó efectivamente y explicar cómo
-verificó sus aportes.
+comprensión, planificación, redacción, código y revisión. Las voces del video
+son propias de los integrantes. Las ideas matemáticas se contrastaron con las
+fuentes registradas, el desarrollo del proyecto y las pruebas del modelo.
 
-## Confirmación previa a Blackboard
+## Archivos de entrega
 
-Esta ficha se convierte en el PDF `MAT1188_EID_G16_2026.pdf` solo después de
-completar las cuentas, la duración real, el enlace público y el SHA del commit
-que contiene exactamente el código del MP4 narrado. La ficha PDF y el MP4 se
-suben como archivos separados.
+- **Video:** `MAT1188_EID_G16_2026.mp4`.
+- **Ficha técnica:** `MAT1188_EID_G16_2026.pdf`.
+- **Código de ética:** `MAT1188_ETICA_G16_2026.pdf`, entregado por separado en
+  la actividad correspondiente de Blackboard.
+
+El video y la ficha técnica se entregan como archivos separados. El repositorio
+público contiene el código correspondiente al SHA indicado en esta ficha.
