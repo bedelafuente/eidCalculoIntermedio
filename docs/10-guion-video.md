@@ -36,7 +36,7 @@ otra vez las animaciones.
 Responderemos: ¿por qué integrar velocidad puede dar un resultado distinto de la
 distancia total recorrida? Lo veremos con un viaje de ida y regreso.»
 
-**En pantalla:** los tres nombres, MAT1188, grupo 16, tema y pregunta completa.
+**En pantalla:** los tres nombres, tema y pregunta completa.
 
 ## 0:20-0:55. Conceptos y condiciones
 
