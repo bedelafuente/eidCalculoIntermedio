@@ -17,10 +17,10 @@ creada directamente desde `main` en `63340b53e2e9a254c9f776b79662915afaf3ff1b`.
 
 ## Avance del video
 
-La [base visual de cinco minutos](avances/grupo16_base_sin_audio.mp4) contiene
-presentación, conceptos, ejemplo, animaciones de Manim, cálculos, respuesta y
-créditos. **No tiene audio y todavía no es el MP4 final de evaluación.**
-Los nombres que aparecen en las escenas identifican la voz prevista en el guion.
+El repositorio contiene el código y la documentación para reconstruir la base
+visual de cinco minutos. El render intermedio sin audio se retiró para evitar
+confundirlo con el MP4 final de evaluación. Los nombres que aparecen en las
+escenas identifican la voz prevista en el guion.
 
 El ejemplo es un viaje a la panadería: 15 m de ida, 10 s de compra y 15 m de
 regreso. La velocidad toma valores +1, 0 y -1 m/s. El viaje modelado dura 40 s:

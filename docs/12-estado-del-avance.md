@@ -35,7 +35,8 @@ equipo se usa Segoe UI. No requiere LaTeX ni recursos audiovisuales externos.
   subíndices; se seleccionó explícitamente una fuente Unicode y se regeneró la
   escena. Debe conservarse esa fuente o una equivalente al renderizar de nuevo.
 
-La base se publica como `avances/grupo16_base_sin_audio.mp4`, junto con su código.
+El render intermedio sin audio se retiró del repositorio para no confundirlo con
+el MP4 final.
 Los renders intermedios en `media/`, el audio local y las fichas generadas en
 `output/` quedan excluidos de Git. La versión definitiva de la ficha deberá
 usar el SHA que corresponda al código del video narrado.

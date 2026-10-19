@@ -1,8 +1,8 @@
 # Ficha técnica del video EID
 
-**Estado:** ficha de preparación para completar antes de subir a Blackboard. La
-base visual existente no tiene audio; los campos marcados como pendientes deben
-confirmarse con el MP4 final narrado.
+**Estado:** ficha de preparación para completar antes de subir a Blackboard. El
+render intermedio sin audio se retiró del repositorio; los campos marcados como
+pendientes deben confirmarse con el MP4 final narrado.
 
 ## Identificación
 
@@ -66,7 +66,7 @@ archivo exportado: **duración real: __________**.
 | --- | --- | --- |
 | Formato | MP4 | Pendiente de comprobar |
 | Resolución recomendada | 1920 × 1080 | Pendiente de exportar/verificar |
-| Base verificada | 1280 × 720, 15 fps, aproximadamente 300 s, sin audio | No corresponde al archivo final |
+| Render de referencia | 1280 × 720, 15 fps, aproximadamente 300 s, sin audio | No corresponde al archivo final y fue retirado |
 | Duración exigida | Entre 4 y 6 minutos, incluidos presentación, cierre y créditos | Pendiente de comprobar |
 | Audio | Tres voces propias, identificadas por nombre, con explicación matemática sustantiva | Pendiente de grabar y mezclar |
 | Animación | Manim Community 0.22.0; Python del entorno documentado en README | Verificar en el equipo que renderice |
