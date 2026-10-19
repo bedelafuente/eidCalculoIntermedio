@@ -1,12 +1,4 @@
-"""Movimiento del auto según docs/05-desarrollo-matematico.md.
-
-Las funciones reciben tiempo en segundos, dentro de [0, 40]. Posición,
-desplazamiento y distancia se expresan en metros; velocidad, en m/s.
-Este módulo no depende de Manim y permite verificar el ejemplo por separado.
-"""
-
 from math import isfinite
-
 
 FIN_IDA = 15.0
 FIN_COMPRA = 25.0
@@ -23,7 +15,6 @@ def _validar_tiempo(t: float) -> None:
 
 
 def velocidad(t: float) -> float:
-    """Velocidad con signo; el auto está detenido al llegar a los 40 s."""
     _validar_tiempo(t)
     if t < FIN_IDA:
         return VELOCIDAD_IDA
@@ -33,7 +24,6 @@ def velocidad(t: float) -> float:
 
 
 def posicion(t: float) -> float:
-    """Posición continua x(t), obtenida al acumular la velocidad."""
     _validar_tiempo(t)
     if t < FIN_IDA:
         return POSICION_INICIAL + VELOCIDAD_IDA * t
@@ -43,12 +33,10 @@ def posicion(t: float) -> float:
 
 
 def desplazamiento(t: float) -> float:
-    """Cambio de posición desde el inicio: x(t) - x(0)."""
     return posicion(t) - POSICION_INICIAL
 
 
 def distancia(t: float) -> float:
-    """Recorrido acumulado D(t): suma de magnitudes, sin cancelaciones."""
     _validar_tiempo(t)
     if t < FIN_IDA:
         return abs(VELOCIDAD_IDA) * t
@@ -59,7 +47,6 @@ def distancia(t: float) -> float:
 
 
 def etapa(t: float) -> str:
-    """Nombre de la etapa que corresponde al reloj compartido de la escena."""
     _validar_tiempo(t)
     if t < FIN_IDA:
         return "ida"

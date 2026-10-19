@@ -1,0 +1,108 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{microtype}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+\definecolor{azul}{HTML}{1E5A88}
+\definecolor{fondo}{HTML}{F0F6FA}
+\newcommand{\tiempo}[1]{\textcolor{azul}{\textbf{Tiempo: #1}}}
+\newcommand{\voz}{\textcolor{azul}{\textbf{Narración -- Benjamin De La Fuente}}}
+\newcommand{\clave}[1]{\fcolorbox{azul}{fondo}{\parbox{0.91\linewidth}{#1}}}
+\begin{document}
+\begin{center}
+{\LARGE \textbf{Guion de narración}}\\[4pt]
+{\large Benjamin De La Fuente -- Grupo 16}\[3pt]
+Integral de velocidad, sumas de Riemann y desplazamiento
+\end{center}
+\hrule
+\vspace{0.8em}
+\clave{\textbf{Idea general:} Tu parte dura aproximadamente 1 minuto y 45 segundos, desde el minuto 1:45 hasta el 3:30 del video. Explicas la gráfica de velocidad, las sumas de Riemann y el cálculo del desplazamiento.}
+
+\section*{1. Gráfica velocidad-tiempo}
+\tiempo{1:45 -- 2:20}\par
+\voz
+\begin{quote}
+Soy Benjamin De La Fuente. En esta gráfica, el eje horizontal es tiempo en segundos; el vertical es velocidad en metros por segundo, no posición.
+
+El punto verde y el auto usan el mismo reloj. El tramo superior corresponde a la ida. El tramo sobre el eje indica la compra: el tiempo avanza y el auto sigue quieto.
+
+El tramo inferior indica el regreso. Velocidad negativa significa cambiar de sentido, no perder distancia. Las líneas horizontales representan velocidades constantes.
+\end{quote}
+\textbf{Qué debes señalar al hablar:}
+\begin{itemize}[leftmargin=1.4em]
+\item Eje horizontal: tiempo $t$, medido en segundos.
+\item Eje vertical: velocidad $v(t)$, medida en metros por segundo.
+\item De $0$ a $15$ s: $v(t)=+1$ m/s; el auto va hacia la panadería.
+\item De $15$ a $25$ s: $v(t)=0$; el auto está detenido durante la compra.
+\item De $25$ a $40$ s: $v(t)=-1$ m/s; el auto vuelve hacia la casa.
+\end{itemize}
+\clave{\textbf{Cuidado:} La gráfica representa velocidad, no posición. El tramo inferior no dice que el auto esté bajo tierra; indica que se mueve en el sentido negativo de la recta.}
+
+\section*{2. De sumas de Riemann a integral}
+\tiempo{2:20 -- 2:55}\par
+\voz
+\begin{quote}
+En cada intervalo pequeño, velocidad por duración aproxima un cambio de posición. Dividimos los cuarenta segundos en $n$ intervalos iguales, de ancho delta $t$, igual a cuarenta dividido por $n$.
+
+Elegimos el punto medio, $t_i^*$. Sigma significa sumar esos aportes. Mostramos ocho, dieciséis y treinta y dos intervalos.
+
+Al refinar la partición, delta $t$ tiende a cero y obtenemos la integral. Aquí los cortes coinciden con las velocidades constantes, por eso las sumas ya son exactas.
+\end{quote}
+\textbf{Fórmula que aparece:}
+\[
+\sum_{i=1}^{n} v(t_i^*)\,\Delta t \longrightarrow \int_0^{40} v(t)\,dt.
+\]
+\textbf{Cómo leerla en voz alta:}
+
+``La suma, desde $i$ igual a uno hasta $n$, de velocidad evaluada en el punto medio $t$ sub $i$ estrella, multiplicada por delta $t$, tiende a la integral de cero a cuarenta de velocidad respecto del tiempo.''
+
+\textbf{Símbolos importantes:}
+\begin{itemize}[leftmargin=1.4em]
+\item $n$: cantidad de subintervalos.
+\item $\Delta t=40/n$: ancho de cada subintervalo, en segundos.
+\item $t_i^*$: punto medio del subintervalo número $i$.
+\item $\Sigma$: suma de todos los aportes pequeños.
+\item $dt$: integración respecto del tiempo.
+\end{itemize}
+\clave{En este ejemplo, las fronteras de la partición coinciden con $t=15$ y $t=25$. Por eso, aunque usemos un número finito de rectángulos, cada rectángulo tiene una velocidad constante y la suma es exacta. Esto no ocurre necesariamente cuando la velocidad varía de forma continua.}
+
+\section*{3. Integral de velocidad: desplazamiento}
+\tiempo{2:55 -- 3:30}\par
+\voz
+\begin{quote}
+En el primer tramo, un metro por segundo durante quince segundos aporta más quince metros. La compra aporta cero por diez: cero metros.
+
+En el regreso, menos un metro por segundo durante quince segundos aporta menos quince metros. Cada región tiene área geométrica positiva de quince metros, pero la región inferior contribuye con signo negativo.
+
+La integral entre cero y cuarenta suma esos aportes: quince más cero menos quince da cero metros de desplazamiento. Las unidades son metros por segundo multiplicados por segundos.
+\end{quote}
+\textbf{Cálculo que aparece:}
+\begin{align*}
+\Delta x &= \int_0^{15} 1\,dt + \int_{15}^{25} 0\,dt + \int_{25}^{40} (-1)\,dt \\
+&= 15+0-15 \\
+&= 0\ \mathrm{m}.
+\end{align*}
+\textbf{Interpretación:}
+\begin{itemize}[leftmargin=1.4em]
+\item Ida: $+1$ m/s $\times$ $15$ s $=+15$ m.
+\item Compra: $0$ m/s $\times$ $10$ s $=0$ m.
+\item Regreso: $-1$ m/s $\times$ $15$ s $=-15$ m.
+\item Resultado: $+15+0-15=0$ m.
+\end{itemize}
+\clave{\textbf{Conclusión de tu bloque:} Integrar la velocidad calcula desplazamiento, porque conserva el signo. Los $15$ metros de ida y los $15$ metros de regreso se cancelan: el auto termina donde comenzó. Esto no significa que haya recorrido cero metros; la distancia se explicará en el bloque siguiente.}
+
+\section*{Repaso rápido antes de grabar}
+\begin{enumerate}[leftmargin=1.4em]
+\item La velocidad negativa indica dirección opuesta, no distancia negativa.
+\item El área bajo el eje de velocidad cuenta negativamente para el desplazamiento.
+\item La unidad final es metro: $(\mathrm{m/s})\cdot\mathrm{s}=\mathrm{m}$.
+\item $\int v(t)\,dt$ entrega desplazamiento; $\int |v(t)|\,dt$ entrega distancia.
+\item En este caso, $x(40)-x(0)=0-0=0$ m confirma el resultado.
+\end{enumerate}
+\end{document}

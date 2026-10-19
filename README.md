@@ -29,6 +29,8 @@ regreso. La velocidad toma valores +1, 0 y -1 m/s. El viaje modelado dura 40 s:
 - [Guion completo, cálculos y tiempos para las tres voces](docs/10-guion-video.md).
 - [Criterios V1-V8 y pendientes del video](docs/11-revision-video.md).
 - [Estado del avance y verificaciones](docs/12-estado-del-avance.md).
+- [Ficha técnica del video](docs/13-ficha-tecnica-video.md).
+- [Checklist de entregables](docs/14-checklist-entregables.md).
 - [Identificación de los tres PDF y alcance exclusivo del grupo 16](docs/09-documentos-y-alcance.md).
 - [Fuentes, recursos y declaración de IA](docs/06-fuentes.md).
 

@@ -1,11 +1,4 @@
-"""Plan de montaje: segundos del video, no segundos del movimiento modelado.
-
-Los nombres identifican la voz prevista. No acreditan una grabación ni un aporte
-realizado. Las voces reales deben añadirse antes de la entrega académica.
-"""
-
 from dataclasses import dataclass
-
 
 INTEGRANTES = (
     "Juan Ignacio Carrera",
@@ -44,7 +37,6 @@ DURACION_TOTAL = sum(b.duracion for b in BLOQUES)
 
 
 def cronograma():
-    """Produce (inicio, fin, bloque) en segundos del montaje."""
     inicio = 0
     for bloque in BLOQUES:
         fin = inicio + bloque.duracion

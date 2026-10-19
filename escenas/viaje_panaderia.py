@@ -1,8 +1,3 @@
-"""Primera escena: un mismo recorrido, dos formas de acumular metros.
-
-Ejecutar desde la raíz: python -m manim -ql escenas/viaje_panaderia.py ViajePanaderia
-"""
-
 from manim import (
     DOWN, LEFT, RIGHT, UP, Arrow, Circle, DecimalNumber,
     NumberLine, Polygon, Rectangle, RoundedRectangle, Scene, Text,
@@ -22,18 +17,14 @@ AMARILLO = "#FFD479"
 PANEL = "#192A40"
 BORDE = "#344C68"
 
-# Un segundo del modelo ocupa 0,6 s de video en todas las etapas.
-# El viaje dura 24 s de video, más presentación y cierre (30 s en total).
 SEGUNDOS_VIDEO_POR_SEGUNDO_MODELO = 0.6
 
 
 def texto(contenido, tamano=24, color=BLANCO, **kwargs):
-    """Texto Pango: esta escena puede renderizarse sin una instalación LaTeX."""
     return Text(contenido, font_size=tamano, color=color, **kwargs)
 
 
 def crear_auto():
-    """Auto vectorial propio. El centro horizontal indica su posición."""
     carroceria = RoundedRectangle(
         width=1.05, height=0.31, corner_radius=0.08,
         fill_color=AZUL, fill_opacity=1, stroke_width=0,
@@ -106,8 +97,6 @@ def crear_contador(titulo, descripcion, funcion, reloj, centro, color):
 
 
 class ViajePanaderia(Scene):
-    """Ida, compra y regreso con desplazamiento y distancia sincronizados."""
-
     def construct(self):
         reloj = ValueTracker(0)
         titulo = texto("¿Volver al inicio significa recorrer cero metros?", 31)
@@ -182,14 +171,12 @@ class ViajePanaderia(Scene):
             etiqueta_tiempo, numero_tiempo, unidad_tiempo, estados,
         )
         self.wait(2)
-        # Linear evita aceleraciones visuales que contradigan la velocidad constante.
-        # El mismo reloj controla todas las representaciones, también durante la compra.
         for inicio, fin in ((0, FIN_IDA), (FIN_IDA, FIN_COMPRA), (FIN_COMPRA, TIEMPO_TOTAL)):
             self.play(
                 reloj.animate.set_value(fin),
                 run_time=(fin - inicio) * SEGUNDOS_VIDEO_POR_SEGUNDO_MODELO,
                 rate_func=linear,
             )
-        # Fijar exactamente el final también actualiza el estado de llegada.
+
         reloj.set_value(TIEMPO_TOTAL)
         self.wait(4)

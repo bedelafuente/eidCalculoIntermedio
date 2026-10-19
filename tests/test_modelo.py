@@ -1,5 +1,3 @@
-"""Comprobaciones físicas y matemáticas del ejemplo, sin necesitar Manim."""
-
 import unittest
 
 from modelo import desplazamiento, distancia, etapa, posicion, velocidad

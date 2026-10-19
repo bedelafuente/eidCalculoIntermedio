@@ -1,9 +1,3 @@
-"""Base visual de 5 minutos para el video del grupo 16, sin voces.
-
-python -m manim -r 1280,720 --fps 15 escenas/video_grupo16.py VideoGrupo16
-Texto Pango y geometría propios; no necesita LaTeX, imágenes ni acceso a red.
-"""
-
 import manimpango
 
 from manim import (

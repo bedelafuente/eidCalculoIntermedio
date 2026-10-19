@@ -1,9 +1,3 @@
-"""Genera una ficha PDF de avance, marcada como borrador y sin afirmar entrega.
-
-Ejecutar: python -m herramientas.ficha_avance
-Dependencia opcional: requirements-documentos.txt.
-"""
-
 import argparse
 from pathlib import Path
 import re
