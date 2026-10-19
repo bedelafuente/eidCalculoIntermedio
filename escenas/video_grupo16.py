@@ -107,7 +107,6 @@ class VideoGrupo16(ViajePanaderia):
 
     def presentacion(self):
         self.add(linea("Distancia recorrida y desplazamiento", 1.45, 38, AZUL))
-        self.add(linea("MAT1188 · Cálculo Intermedio · Grupo 16 · 2026", 0.7, 24, SUAVE))
         self.add(linea("¿Por qué integrar velocidad puede dar un resultado", -0.2, 28))
         self.add(linea("distinto de la distancia total recorrida?", -0.75, 28))
         for y, nombre in zip((-1.65, -2.15, -2.65), INTEGRANTES):
