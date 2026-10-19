@@ -13,7 +13,7 @@
 | Cuentas de GitHub | bedelafuente, BenjaminAliagaMardones y juan-xp |
 | Repositorio | https://github.com/bedelafuente/eidCalculoIntermedio |
 | Rama del código entregado | `main` |
-| SHA del código entregado | `542229a89e52562ef6bef879b516679ea9533d22` |
+| SHA del código entregado | `857881bb64990a14ce3da663b2d4a193fcb05c72` |
 
 ## Descripción del contenido
 
@@ -66,7 +66,7 @@ de 4 a 6 minutos.
 | Duración exigida | Entre 4 y 6 minutos, incluidos presentación, cierre y créditos | Listo |
 | Audio | Tres voces propias, identificadas por nombre, con explicación matemática sustantiva | Listo |
 | Animación | Manim Community 0.22.0; Python del entorno documentado en README | Lista |
-| Escenas | `escenas/video_grupo16.py`, escena `VideoGrupo16` | `542229a89e52562ef6bef879b516679ea9533d22` |
+| Escenas | `escenas/video_grupo16.py`, escena `VideoGrupo16` | `857881bb64990a14ce3da663b2d4a193fcb05c72` |
 | Recursos externos | No se usan imágenes, música ni audio externo en la base | Listo |
 
 ## Evidencias incluidas en el repositorio

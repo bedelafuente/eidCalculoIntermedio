@@ -1,151 +1,181 @@
-# EID de Cálculo Intermedio - Grupo 16
+# EID de Cálculo Intermedio — Grupo 16
 
 **MAT1188 · 2026 · Distancia recorrida y desplazamiento**
 
-Pregunta central: **¿Por qué integrar velocidad puede dar un resultado distinto de la distancia total recorrida?**
+Pregunta central: **¿Por qué integrar velocidad puede dar un resultado distinto
+de la distancia total recorrida?**
 
 | Integrante | Cuenta de GitHub |
 | --- | --- |
-| Juan Ignacio Carrera | juan-xp |
-| Benjamin De La Fuente | bedelafuente |
-| Benjamin Aliaga | BenjaminAliagaMardones |
+| Juan Ignacio Carrera | `juan-xp` |
+| Benjamin De La Fuente | `bedelafuente` |
+| Benjamin Aliaga | `BenjaminAliagaMardones` |
 
-Este clon tiene como remoto [bedelafuente/eidCalculoIntermedio](https://github.com/bedelafuente/eidCalculoIntermedio).
-La configuración local de autor es `juan-xp`. El código entregado está en la
-rama `main`.
+Repositorio público: <https://github.com/bedelafuente/eidCalculoIntermedio>
 
-## Avance del video
+## Resumen del proyecto
 
-El repositorio contiene el código y la documentación para reconstruir la base
-visual de cinco minutos. También conserva el render de referencia sin audio;
-ese archivo no reemplaza al MP4 final narrado. Los nombres que aparecen en las
-escenas identifican la voz prevista en el guion.
+El video explica la diferencia entre desplazamiento y distancia con un viaje en
+una dimensión: el auto avanza 15 m hacia la panadería, permanece detenido 10 s
+y regresa 15 m. La velocidad toma los valores $+1$, $0$ y $-1$ m/s durante 40 s
+de tiempo modelado. Por tanto:
 
-El ejemplo es un viaje a la panadería: 15 m de ida, 10 s de compra y 15 m de
-regreso. La velocidad toma valores +1, 0 y -1 m/s. El viaje modelado dura 40 s:
-**desplazamiento = 0 m; distancia recorrida = 30 m**.
+$$
+\Delta x=15+0-15=0\ \text{m},
+\qquad
+D=15+0+15=30\ \text{m}.
+$$
 
-- [Guion completo, cálculos y tiempos para las tres voces](docs/10-guion-video.md).
-- [Criterios V1-V8 y pendientes del video](docs/11-revision-video.md).
-- [Estado del avance y verificaciones](docs/12-estado-del-avance.md).
-- [Ficha técnica del video](docs/13-ficha-tecnica-video.md).
-- [Checklist de entregables](docs/14-checklist-entregables.md).
-- [Identificación de los tres PDF y alcance exclusivo del grupo 16](docs/09-documentos-y-alcance.md).
-- [Fuentes, recursos y declaración de IA](docs/06-fuentes.md).
+La rama entregada es `main`. El SHA del código que corresponde al video está
+registrado en la [ficha técnica](docs/13-ficha-tecnica-video.md).
 
-Se considera únicamente la rúbrica del **video, V1-V8, hasta 40 puntos**.
-Los apartados de defensa oral no forman parte de este avance.
+## Requisitos
 
-## Entorno y dependencias
+- Python 3.12 o superior.
+- Manim Community 0.22.0, fijado en `requirements.txt`.
+- Dependencias del sistema requeridas por Manim: Cairo, Pango y FFmpeg. En
+  Windows se necesita además una fuente Unicode disponible, como Segoe UI; en
+  Linux y macOS pueden usarse DejaVu Sans, Cambria o Noto Sans.
+- Ejecutar los comandos desde la raíz del repositorio, la carpeta que contiene
+  este `README.md`.
 
-Entorno verificado para este avance: **Windows, Python 3.14.0, Manim Community
-0.22.0**, PyAV 19.0.1. La escena inicial también había sido comprobada con
-Python 3.11.15 en macOS. `requirements.txt` fija Manim en 0.22.0.
+Consulta la [instalación oficial de Manim](https://docs.manim.community/en/stable/installation.html)
+si tu sistema no tiene alguna dependencia gráfica.
 
-Instalar las dependencias del sistema indicadas en la
-[documentación oficial de Manim](https://docs.manim.community/en/stable/installation.html).
-Para el video completo se necesita una de estas fuentes Unicode: **Segoe UI,
-DejaVu Sans, Cambria o Noto Sans**. Se usa la primera disponible, en ese orden.
-En el render de Windows se utilizó Segoe UI. Las escenas usan Pango y figuras
-vectoriales propias; no necesitan LaTeX, música, imágenes ni descargas en ejecución.
-
-Ejemplo de instalación en PowerShell:
+## Instalación en Windows (PowerShell)
 
 ```powershell
-python -m venv .venv
+py -3 -m venv .venv
 .\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-En macOS/Linux, activar con `source .venv/bin/activate`. En macOS pueden ser
-necesarios Cairo y Pango mediante Homebrew. Ejecutar los comandos desde la raíz.
+Si PowerShell bloquea la activación del entorno, revisa la política de ejecución
+de scripts de tu usuario y la documentación de Python. También puedes usar
+`.venv\Scripts\python.exe` directamente sin activar el entorno.
 
-## Renderizar las escenas
+## Instalación en Linux
 
-Base completa a 720p y 15 fps, igual al avance incluido:
+Instala Python, FFmpeg, Cairo, Pango y sus paquetes de desarrollo mediante el
+gestor de paquetes de tu distribución. Después:
 
-```powershell
-python -m manim -r 1280,720 --fps 15 escenas/video_grupo16.py VideoGrupo16
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
-Resultado: `media/videos/video_grupo16/720p15/VideoGrupo16.mp4`, sin audio.
-Los diez bloques están definidos en [video_plan.py](video_plan.py):
-20 + 35 + 20 + 30 + 35 + 35 + 35 + 35 + 35 + 20 = **300 segundos**.
-El reloj del viaje y el de la gráfica usan 0,6 s de video por segundo del modelo.
-La posición y la gráfica simultáneas se sincronizan con el mismo `ValueTracker`.
+## Instalación en macOS
 
-Exportación de mayor resolución para edición:
+Con Homebrew, instala las dependencias gráficas habituales:
 
-```powershell
-python -m manim -r 1920,1080 --fps 30 escenas/video_grupo16.py VideoGrupo16
+```bash
+brew install cairo pango ffmpeg pkg-config
 ```
 
-Resultado: `media/videos/video_grupo16/1080p30/VideoGrupo16.mp4`, sin audio.
-Esta exportación se ofrece como comando reproducible; el avance verificado es
-el render 720p15. Conservar los tiempos del guion al incorporar las voces.
+Luego crea el entorno e instala Manim:
 
-Clip inicial independiente, 30 s:
-
-```powershell
-python -m manim -ql escenas/viaje_panaderia.py ViajePanaderia
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
-Resultado: `media/videos/viaje_panaderia/480p15/ViajePanaderia.mp4`.
-[Guion y detalles del clip](docs/08-escena-viaje.md).
+## Ejecutar las pruebas
 
-## Código y comprobación matemática
+Las pruebas matemáticas no necesitan Manim y comprueban posiciones, velocidad,
+pausa, continuidad, distancia e integrales por tramos:
 
-- [modelo.py](modelo.py): velocidad, posición, desplazamiento, distancia y etapas.
-- [escenas/video_grupo16.py](escenas/video_grupo16.py): montaje completo, gráfica,
-  rectángulos y comparación de integrales.
-- [escenas/viaje_panaderia.py](escenas/viaje_panaderia.py): auto, edificios y contadores.
-- [Desarrollo matemático](docs/05-desarrollo-matematico.md).
-
-```powershell
+```bash
 python -m unittest discover -s tests -v
 ```
 
-Las ocho pruebas no requieren Manim. Comprueban hitos, pausa, continuidad,
-crecimiento de la distancia e integrales por rectángulos. Se ejecutaron
-correctamente en el entorno de este avance. El render se revisó con metadatos
-y fotogramas: 4500 cuadros, aproximadamente 300 s, 1280 × 720 y cero pistas de audio.
+La salida esperada termina con `OK` y ocho pruebas aprobadas.
 
-## Ficha y entrega
+## Renderizar las escenas
 
-El generador opcional produce una **ficha PDF de avance marcada como borrador**:
+La escena principal se llama `VideoGrupo16` y está en
+`escenas/video_grupo16.py`. El siguiente comando funciona en Windows, Linux y
+macOS después de activar el entorno virtual:
 
-```powershell
+```bash
+python -m manim -r 1920,1080 --fps 30 escenas/video_grupo16.py VideoGrupo16
+```
+
+El archivo se genera en:
+
+```text
+media/videos/video_grupo16/1080p30/VideoGrupo16.mp4
+```
+
+El render de referencia, a 720p y 15 fps, se obtiene con:
+
+```bash
+python -m manim -r 1280,720 --fps 15 escenas/video_grupo16.py VideoGrupo16
+```
+
+La escena breve del viaje se ejecuta con:
+
+```bash
+python -m manim -ql escenas/viaje_panaderia.py ViajePanaderia
+```
+
+Las animaciones no incluyen voces. El audio del video evaluable se graba y se
+sincroniza durante la edición final.
+
+## Estructura principal
+
+- `modelo.py`: velocidad, posición, desplazamiento, distancia y etapas del viaje.
+- `video_plan.py`: bloques, voces y duración del montaje.
+- `escenas/video_grupo16.py`: escena completa, gráfica, rectángulos y contadores.
+- `escenas/viaje_panaderia.py`: auto, edificios y recorrido sobre la recta.
+- `tests/test_modelo.py`: ocho pruebas del modelo matemático.
+- `docs/05-desarrollo-matematico.md`: desarrollo y verificación del ejemplo.
+- `docs/10-guion-video.md`: guion y tiempos de narración.
+- `docs/13-ficha-tecnica-video.md`: ficha técnica para la entrega.
+- `docs/14-checklist-entregables.md`: lista de comprobación final.
+- `docs/06-fuentes.md`: referencias y declaración de IA.
+
+## Reproducibilidad y ficha
+
+El código entregado está identificado por el SHA indicado en la ficha técnica.
+El generador `herramientas/ficha_avance.py` produce una ficha de avance marcada
+como borrador; no sustituye la ficha PDF final:
+
+```bash
 python -m pip install -r requirements-documentos.txt
 python -m herramientas.ficha_avance
 ```
 
-Resultado: `output/pdf/MAT1188_EID_G16_2026_borrador.pdf`. Registra el SHA de `HEAD`
-al ejecutarse; también acepta `--sha` con un commit de 40 caracteres. Usar un
-commit publicado que corresponda al código, sin cambios pendientes.
-El PDF generado no se añade a Git y no sustituye la ficha final.
+La ficha final debe llamarse `MAT1188_EID_G16_2026.pdf` y registrar duración,
+enlace público, SHA, referencias y declaración de IA.
 
-La ficha técnica final está documentada en
-[docs/13-ficha-tecnica-video.md](docs/13-ficha-tecnica-video.md). Cada voz debe
-explicar matemáticas, además de presentarse. Los entregables finales se llaman:
+## Entrega
 
-- `MAT1188_EID_G16_2026.mp4`: video narrado de 4-6 minutos.
-- `MAT1188_EID_G16_2026.pdf`: ficha con integrantes, cuentas, tema, pregunta,
-  duración real, enlace público, SHA del código final, referencias y declaración de IA.
+Los archivos académicos son:
 
-La pauta indica entrega final el **18 de octubre de 2026 a las 23:59**, en
-Blackboard, con MP4 y ficha separados. El PDF de ética se entrega de forma
-independiente en la actividad correspondiente.
+- `MAT1188_EID_G16_2026.mp4`: video narrado de 4 a 6 minutos.
+- `MAT1188_EID_G16_2026.pdf`: ficha técnica.
+- `MAT1188_ETICA_G16_2026.pdf`: código de ética, entregado por separado en
+  Blackboard.
 
-## Documentos base del repositorio
+El MP4 y la ficha se cargan como archivos separados. El repositorio debe ser
+público y contener el código correspondiente al SHA anotado en la ficha.
+
+## Documentación y fuentes
 
 - [Tema del grupo 16](docs/04-tema.md).
 - [Pauta del EID](docs/01-pauta-proyecto.md).
-- [Apunte: Introducción a la integral](docs/02-introduccion-integral.md).
-- [Transcripción de la rúbrica](docs/03-rubrica-evaluacion.md), que conserva ambos
-  componentes del original; aquí se utilizan solo V1-V8.
-- [Prompt previo de NotebookLM](docs/07-prompt-notebooklm.md), apoyo de estudio
-  con otro ejemplo; no es el guion del video evaluado.
+- [Apunte base: Introducción a la integral](docs/02-introduccion-integral.md).
+- [Rúbrica](docs/03-rubrica-evaluacion.md).
+- [Fuentes y declaración de IA](docs/06-fuentes.md).
+- [Guion completo](docs/10-guion-video.md).
+- [Revisión V1–V8](docs/11-revision-video.md).
+- [Checklist de entregables](docs/14-checklist-entregables.md).
 
-`media/`, `tmp/`, `audio/`, `output/` y `.venv/` se generan localmente y están
-excluidos de Git. El render de referencia publicado en `avances/` es material de
-apoyo y no el video final de entrega.
+Los directorios `.venv/`, `media/`, `tmp/`, `audio/` y `output/` son locales o
+generados y están excluidos de Git. El archivo en `avances/` es solo un render de
+referencia sin audio; no reemplaza al video final.
