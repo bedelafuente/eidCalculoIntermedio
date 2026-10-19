@@ -17,7 +17,7 @@ confirmarse con el MP4 final narrado.
 | Cuentas de GitHub | **Pendiente de confirmar por el equipo** |
 | Repositorio | https://github.com/bedelafuente/eidCalculoIntermedio |
 | Rama del desarrollo | `dev/grupo-16-video` |
-| SHA del código entregado | **Pendiente: registrar el SHA de 40 caracteres que corresponda al MP4 final** |
+| SHA del código entregado | **542229a89e52562ef6bef879b516679ea9533d22** |
 
 ## Descripción del contenido
 
